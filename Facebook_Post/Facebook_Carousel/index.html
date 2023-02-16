@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox_FB_Carousel</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+    <style>
+        body, div, img{
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica;
+            color: #000000;
+        }
+
+        #container{
+            position: absolute;
+            width: 375px;
+            height: 490px;
+            background-color: #f1f2f5;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        #wrapper{
+            position: absolute;
+            height: 310px;
+            white-space: nowrap;
+            margin: 20px 10px 10px 10px;
+        }
+
+        .slide{
+            display: inline-block;
+            width: 255px;
+            height: 310px;
+            background-color: #f1f2f5;
+            color: #000000;
+            border: 1px solid #cdced0;
+            border-radius: 5px;
+            margin-right: 18px;
+        }
+        .header {
+            height: 97px;
+            position: relative;
+        }
+        .header .profileImage {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+        .header .profileImage img {
+            width: 36px;
+            height: 36px;
+            /* border-radius: 50%;
+            border: 1px solid #ddd; */
+        }
+        .header .nameText {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            width: 282px;
+        }
+        .header .nameText .name {
+            line-height: 18px;
+            color: #262626;
+            margin: 0px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .header .nameText .date {
+            font-size: 15px;
+            color: #6B6E72;
+        }
+        .header .nameText .iconPeople {
+            display: inline-block;
+            width: 12px;
+        }
+        .header .menuIcon img {
+            width: 20px;
+            height: 6px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            margin: 10px;
+        }
+        .worldImg{
+            width: 16px;
+            height: 16px;
+            position: relative;
+            top: 2px;
+            left: 2px;
+        }
+        
+        .carouselContent{
+            height: 310px;
+        }
+        .caption{
+            font-size: 17px;
+            line-height: 19px;
+            color: #1C1E21;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 8px;
+        }
+        .productTitle{
+            width: 105px;
+            height: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .productUrl{
+            font-size: 13px;
+            margin: 0px;
+        }
+        .ctaWrapper{
+            display: table;
+            height: 85px;
+            margin-top: -4px;
+            margin-left: 15px;
+        }
+        .ctaContent{
+            display: table-cell;
+            vertical-align: middle;
+            width: 105px;
+            white-space: initial;
+        }
+        .cta{
+            position: relative;
+            width: 112px;
+            height: 25px;
+            padding: 0px;
+            border: 2px solid #64676A;
+            color: #000000;
+            font-size: 10px;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            text-transform: uppercase;
+            top: 30px;
+            right: -5px;
+        }
+        .slide3{
+            margin-right: 0px;
+        }
+        .footer{
+            position: absolute;
+            bottom: 0px;
+            width: 375px;
+            left: 0px;
+            padding: 12px 0px;
+            margin: 0px auto;
+            text-align: center;
+            /* border-top: 1px solid #cdced0; */
+            color: #616770;
+        }
+        .like,.comment{
+            position: relative;
+            margin-right: 45px;
+            display: inline-block;
+            color: #616770;
+        }
+        .share{
+            display: inline-block;
+            color: #616770;
+        }
+        .iconAlign{
+            position: relative;
+            top: 4px;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+<div id="container">
+    <div class="header">
+        <span class="profileImage">
+            <img src="5407a0d9-f1f6-46d8-9b20-f8650ca0c3b8.png" alt="logo">
+        </span>
+        <div class="nameText">
+          <p class="name">Lorem ipsum dolor</p>
+          <span id="dateBox" class="date">Sponsored •</span>
+          <span class="iconPeople">
+              <img src="a9d29126-3475-403c-aba5-7458e45f7f54.png" alt="" class="worldImg">
+         </span>
+        </div>
+        <span class="menuIcon"><img src="36e79a01-1da9-48a4-bbc8-3ec3c22d188a.png" alt=""></span>
+        <p class="caption">Lorem ipsum dolor sit amet <br> Lorem ipsum dolor sit amet </p>
+    </div>
+    <div id="wrapper">
+        <div class="slide">
+            <div class="carouselContent">
+                <img class="carouselImage" src="498a0165-cabb-4630-8f1f-57e50df0afc7.jpg" width="255" height="226" alt="">
+                <div class="ctaWrapper">
+                  <div class="ctaContent">
+                    <p class="productTitle">Ut enim ad minim?</p>
+                    <p class="productUrl">Quis autem vel</p>
+                  </div>
+                  <div id="cta" class="cta">Explore Dubai</div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="carouselContent">
+                <img class="carouselImage" src="73fa1b6a-e13a-463a-a543-857b09d240aa.jpg" width="255" height="226" alt="">
+                <div class="ctaWrapper">
+                  <div class="ctaContent">
+                    <p class="productTitle">And enjoy 1 hour of free desert off-roading!</p>
+                    <p class="productUrl">Quis autem vel</p>
+                  </div>
+                  <div id="cta" class="cta">Explore Dubai</div>
+                </div>
+            </div>
+        </div>
+        <div class="slide slide3">
+            <div clcdo-1208_sandbox_fb_feed_01ass="carouselContent">
+                <img class="carouselImage" src="519c73fd-9f59-4ee1-9f4d-9d089d03ab8c.jpg" width="255" height="226" alt="">
+                <div class="ctaWrapper">
+                  <div class="ctaContent">
+                    <p class="productTitle">Watch the sunset over the desert on a Camel trek!</p>
+                    <p class="productUrl">Quis autem vel</p>
+                  </div>
+                  <div id="cta" class="cta">Explore Dubai</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="like">
+            <img src="5be95958-127b-40e5-a562-1f88b1916df4.png" alt="" class="iconAlign">
+            <span>Like</span>
+        </div>
+        <div class="comment">
+            <img src="3873c3bb-2d15-459f-af16-021825b2dff5.png" alt="" class="iconAlign">
+            <span>Comment</span>
+        </div>
+        <div class="share">
+            <img src="5d44aead-7c83-49a5-b10c-e3b78e49c8bc.png" alt="" class="iconAlign">
+            <span>Share</span>
+        </div>
+     </div>
+    
+</div>
+
+
+
+<script type="text/javascript">
+
+var wrapper = document.getElementById('wrapper')
+
+var slide = document.getElementsByClassName('slide')
+console.log(slide)
+
+//Timeline
+var tl = gsap.timeline({ delay: 0, repeat: -1, repeatDelay: 0});
+
+tl.addLabel("start","+=1")
+.to(wrapper, 1, { x: -275 }, "start")
+
+tl.addLabel("phase_1","+=1")
+.to(wrapper, 1, { x: -550 }, "phase_1")
+
+// tl.addLabel("phase_2","+=1")
+// .to(wrapper, 1, { x: -765 }, "phase_2")
+
+tl.addLabel("reset","+=1")
+.to(wrapper, 2, { x: 0 }, "reset")
+
+
+</script>
+
+
+</body></html>
