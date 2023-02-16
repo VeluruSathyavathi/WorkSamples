@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="38a6ac03-f4e1-44cd-93cf-eeb98ce4a143.css" inline="">
+  <link rel="stylesheet" href="f2c457eb-1194-461b-b99e-08e91a173b75.css" inline="">
+  <link rel="stylesheet" href="08294f1a-55aa-4c55-8e99-81c030fc6ad0.css" inline="">
+  <link rel="stylesheet" href="514906d6-7888-4af5-ac7d-acbbc79ae6ef.css" inline="">
+  <link rel="stylesheet" href="a5b33f23-89ab-45af-92e4-f633e43bb547.css" inline="">
+  <link rel="stylesheet" href="eb04e3ab-2583-4911-ba84-e2a89c0779a1.css" inline="">
+  <link rel="stylesheet" href="00d24e1e-c517-47d1-bf8a-963482f6fa36.css" inline="">
+  <link rel="stylesheet" href="fccccac9-57a3-46f5-a0fd-5eabc907f020.css" inline="">
+  
+<!-- Greensock -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+  <!-- ClickTag value setup/fallback -->
+  <script type="text/javascript">
+    /* Main Link*/
+    var clickTag = "#";
+  </script>
+
+  <title>SC Johnson</title>
+
+</head>
+
+<body>
+  <div id="banner">
+    <div id="content">
+      <!-- Image -->
+      <div id="image_1" class="img" style="height: 600px; width: 300px;">
+        <img src="462353bb-0003-4c6b-9784-62ebd3ee4a96.jpeg" alt=""> 
+      </div>  
+      <!-- Logo -->
+      <div id="logo">
+        <img src="68088d4c-bb78-4798-9850-1f6e77d44327.png" alt="">
+      </div>
+      <div id="text_cta">
+        <div id="headline" class="reg-text">Easy grip and open with extended tabs</div>
+        <div id="subhead"></div>
+        
+        <div id="button">
+          <span class="desktop_button" style="color: rgb(255, 255, 255); background-color: rgb(44, 68, 138);">Shop now</span>
+          <span class="mobile_button show_btn"> <img src="ccc52fb3-4fb7-4d8c-8f7e-240a03e6e68e.png"></span>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Exit Link 
+    <div id="exit_link"></div>-->
+  </div><!-- BANNER CONTAINER -->
+
+  <!--Font size overrrides for adZU (Hidden in banner) -->
+  <div id="font_size_override_headline" class="hide"></div>
+
+
+
+<script type="text/javascript" src="269dda94-5341-436b-8696-53a75c105209.js" inline=""></script>
+<script type="text/javascript">
+
+  ////////////
+  /// VARS ///
+  ////////////
+
+  function init() {
+
+    var element = {
+      banner: document.getElementById('banner'),
+      headline: document.getElementById('headline'),
+      font_size_override_headline: document.getElementById('font_size_override_headline'),
+      exit_link: document.getElementById('exit_link'),
+    }
+
+    //Discliamer
+    if (element.font_size_override_headline.innerHTML !== '') {
+    var newFontSize = parseInt(element.font_size_override_headline.innerHTML)
+    
+    console.log('element.font_size_override_headline: ' + newFontSize);
+
+    element.headline.style.fontSize = newFontSize +'px'
+    // element.disclaimer_text_2.style.fontSize = newFontSize +'px'
+    }
+
+    textShrink(element.copy_1);
+    textShrink(element.copy_2);
+    textShrink(element.lockup_copy_1);
+    textShrink(element.lockup_copy_2);
+    textShrink(element.copy_4);
+    textShrink(element.copy_5);
+
+    element.lockup_copy_1.style.height = "auto";
+
+    var globalTimeline = {
+      delay: 0,
+      repeat: 1,
+      repeatDelay: 0,
+    }
+
+    /////////////////////////////////////////////////////////
+    /// GET THE BANNER SIZE TO LOAD THE CORRECT ANIMATION ///
+    /////////////////////////////////////////////////////////
+
+    var bannerSize = {
+      w: window.innerWidth,
+      h: window.innerHeight
+    }
+
+    console.log('bannerSize: ', bannerSize)
+
+    if (bannerSize.w == 160 && bannerSize.h == 600) {
+      console.log('THIS IS 160x600');
+      animation_160x600()
+
+    } else if (bannerSize.w == 300 && bannerSize.h == 250) {
+      console.log('THIS IS 300x250');
+      animation_300x250()
+
+    } else if (bannerSize.w == 300 && bannerSize.h == 600) {
+      console.log('THIS IS 300x600');
+      animation_300x600()
+
+    } else if (bannerSize.w == 320 && bannerSize.h == 50) {
+      console.log('THIS IS 320x50');
+      animation_320x50()
+
+    } else if (bannerSize.w == 728 && bannerSize.h == 90) {
+      console.log('THIS IS 728x90');
+      animation_728x90()
+
+    } 
+    //////////////////////////
+    /// ANIMATION PER SIZE ///
+    //////////////////////////        
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    function animation_160x600() {
+
+      //Endframe
+      function endFrame() {
+        console.log('endFrame()');
+      }
+
+      //Timeline
+      var loopCounter = 0;
+      var tl = gsap.timeline({ delay: 0, repeat: globalTimeline.repeat, repeatDelay: globalTimeline.repeatDelay, onComplete: endFrame });
+
+      tl.addLabel("start")
+        .to(element.banner, 0, { opacity: 1 }, "start")
+
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    function animation_300x250() {
+
+      //Endframe
+      function endFrame() {
+        console.log('endFrame()');
+      }
+
+      //Timeline
+      var loopCounter = 0;
+      var tl = gsap.timeline({ delay: 0, repeat: globalTimeline.repeat, repeatDelay: globalTimeline.repeatDelay, onComplete: endFrame });
+
+      tl.addLabel("start")
+        .to(element.banner, 0, { opacity: 1 }, "start")
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    function animation_300x600() {
+
+      //Endframe
+      function endFrame() {
+        console.log('endFrame()');
+      }
+
+      //Timeline
+      var loopCounter = 0;
+      var tl = gsap.timeline({ delay: 0, repeat: globalTimeline.repeat, repeatDelay: globalTimeline.repeatDelay, onComplete: endFrame });
+
+      tl.addLabel("start")
+        .to(element.banner, 0, { opacity: 1 }, "start")
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    function animation_320x50() {
+
+      //Endframe
+      function endFrame() {
+        console.log('endFrame()');
+      }
+
+      //Timeline
+      var loopCounter = 0;
+      var tl = gsap.timeline({ delay: 0, repeat: globalTimeline.repeat, repeatDelay: globalTimeline.repeatDelay, onComplete: endFrame });
+
+      tl.addLabel("start")
+        .to(element.banner, 0, { opacity: 1 }, "start")
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    function animation_728x90() {
+
+    //Endframe
+    function endFrame() {
+      console.log('endFrame()');
+    }
+
+    //Timeline
+    var loopCounter = 0;
+    var tl = gsap.timeline({ delay: 0, repeat: globalTimeline.repeat, repeatDelay: globalTimeline.repeatDelay, onComplete: endFrame });
+
+    tl.addLabel("start")
+      .to(element.banner, 0, { opacity: 1 }, "start")
+    }
+
+    ////////////////////
+    /// EXIT HANDLER ///
+    ////////////////////
+
+    function exitLink() {
+      console.log('exit Clicked')
+      window.open(clickTag, "_blank")
+    }
+    element.exit_link.addEventListener("click", exitLink); //Desktop
+
+  }
+
+  //Run the banner with a 1/10th of a second delay to queue the JS after onLoad()
+  setTimeout(() => {
+    init()
+  }, 100);
+</script>
+
+</body><!-- Text Shrink script if needed --></html>

@@ -1,0 +1,60 @@
+@media screen and (max-width: 165px) and (max-height: 605px) and (min-width: 155px) and (min-height: 595px) {
+
+    #banner {
+        width: 160px;
+        height: 600px;
+    }
+
+    #logo{
+        position: absolute;
+        left: 13px;
+        top: 65px;
+        height: 66px;
+        width: 131px;
+    }
+
+    #image_1 img{
+        width: 160px; 
+        height: 600px;
+    }
+
+    #text_cta {
+        position: absolute;
+        text-align: center;
+        top: 161px;
+        padding: 0px 5px 0px 5px;
+    }
+
+    #headline{
+        /* position: absolute; */
+        text-align: center;
+        top: 188px;
+        font-size: 20px;
+        line-height: 1.2em;
+    }
+
+    #subhead{
+       margin: 4px 0px 0px 0px;
+       font-size: 18px;
+       line-height: 1.2em;
+    }
+
+    .desktop_button {
+        background-color: #2C448A;
+        border: none;
+        color: #ffffff;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 4px;
+        /* font-family: museo-sans-rounded, sans-serif; */
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    .mobile_button {
+        display: none;
+    } 
+}
