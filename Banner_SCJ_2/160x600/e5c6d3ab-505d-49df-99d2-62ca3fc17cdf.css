@@ -1,0 +1,76 @@
+@media screen and (max-width: 165px) and (max-height: 605px) and (min-width: 155px) and (min-height: 595px) {
+
+    #banner {
+        width: 160px;
+        height: 600px;
+    }
+
+    #logo{
+        position: absolute;
+        left: 44px;
+        top: 20px;
+        height: 56px;
+        width: 72px;
+    }
+    #logo_clr{
+        opacity: 0;
+    }
+
+    #image_1 img{
+        width: 160px; 
+        height: 262px;
+    }
+
+    #text_cta {
+        position: absolute;
+        text-align: center;
+        top: 276px;
+        padding: 0px 5px 0px 5px;
+    }
+
+    #headline{
+        /* position: absolute; */
+        text-align: center;
+        margin: 4px 20px 0px 20px;
+        top: 188px;
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    #subhead{
+       margin: 4px 0px 0px 0px;
+       font-size: 18px;
+       line-height: 27px;
+       font-family: 'bogleregular', sans-serif;
+    }
+
+    .desktop_button {
+        /* background-color: #2C448A; */
+        border: 1.5px solid #2E2F32;
+        box-sizing: border-box;
+        color: #2E2F32;
+        padding: 8px 18px 8px 18px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 50px;
+        font-family: 'boglebold', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+
+    .mobile_button {
+        display: none;
+    } 
+    #logo_walmart{
+        position: absolute;
+        left: 18px;
+        top: 550px;
+        height: 30px;
+        width: 124px;
+    }
+    #logo_walmartstar{
+        opacity: 0;
+    }
+}

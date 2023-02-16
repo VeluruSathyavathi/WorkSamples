@@ -1,0 +1,17 @@
+#headline {
+    font-weight: 700;
+    font-style: normal;
+    color:#2E2F32;
+}
+
+#subhead {
+    font-weight: 400;
+    font-style: normal;
+    color:#2E2F32;
+} 
+
+#button {
+    font-weight: 700;
+    font-style: normal;
+    /* color:#D94398; */
+} 
